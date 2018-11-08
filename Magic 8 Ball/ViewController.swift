@@ -23,7 +23,9 @@ class ViewController: UIViewController {
         updateBallStatus()
     }
     
-    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        updateBallStatus()
+    }
     
     func updateBallStatus() {
         randomBallIndex = Int.random(in: 0 ... 4)
